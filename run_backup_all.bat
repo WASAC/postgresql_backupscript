@@ -1,0 +1,1 @@
+python backup_postgresql.py -d your_database -H localhost -P 5432 -u postgres -f G:\postgis_backups -t all
