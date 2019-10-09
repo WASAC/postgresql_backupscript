@@ -51,7 +51,7 @@ def backup(args):
     cmd = "pg_dump.exe --host {0} --port {1} --username {2} -w --format custom --encoding UTF8 ".format(args.host, args.port, args.user)
     if args.target == "minimum":
         tables = ["chamber", "management", "pipeline", "private_operator", "pumping_station",
-                  "reservoir", "water_connection", "waterfacilities", "watersource", "wss", "status"]
+                  "reservoir", "water_connection", "waterfacilities", "watersource", "wss", "status", "valve", "wtp"]
         for t in tables:
             cmd += " -t {0} ".format(t)
     cmd += "--file {0} {1}".format(backup_filename, args.database)
